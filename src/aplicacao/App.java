@@ -46,7 +46,7 @@ public class App {
         System.out.print("Condomínio (1 - Mar Azul, 2 - Paraíso): ");
         opcaoCondominio = in.nextInt();
         in.nextLine();
-
+        in.close();
         if (opcaoCondominio == 1) {
             gerarBoleto = new ServicoGerarBoleto(valorDiaria, new ServicoTaxaMarAzul());
         } else {
@@ -63,5 +63,6 @@ public class App {
         System.out.println(imovel);
         System.out.println(aluguel);
         System.out.println(aluguel.getBoleto());
+        
     }
 }
